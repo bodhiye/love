@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>小芳</title>
+    <script type="text/javascript" src="./jquery.min.js"></script>
     <link type="text/css" href="./style.css" rel="stylesheet" />
     <style>
         html,
@@ -31,10 +31,10 @@
     <div class="m-main">
         <div class="player">
             <a href="javascript:void(0)" rel="external nofollow" rel="external nofollow" id="js-play">
-                <img src="./img/开始.png" alt="" id="img1" />
+                <img src="./img/start.png" alt="" id="start" />
             </a>
             <a href="javascript:void(0)" rel="external nofollow" rel="external nofollow" id="js-pause">
-                <img src="./img/暂停.png" alt="" id="img2" />
+                <img src="./img/pause.png" alt="" id="pause" />
             </a>
             <div class="play-box">
                 <div class="left">
@@ -47,8 +47,8 @@
             </div>
         </div>
         <div class="video">
-            <video controls autoplay name="media" id="js-video">
-                <source src="./mp3/白月光与朱砂痣.mp3" type="video/mp4">
+            <video controls autoplay loop name="media" id="js-video">
+                <source src="./mp3/music.mp3" type="video/mp4">
             </video>
         </div>
     </div>
@@ -79,7 +79,6 @@
 
             function AudioControl(id) {
                 // 音频控制进度条
-                console.log(777);
                 var audio = document.getElementById(id);
                 $(audio).on('loadedmetadata', function () {
                     audio.pause();
@@ -97,14 +96,14 @@
                     // 播放
                     $(document).on('click', '#js-play', function () {
                         audio.play()
-                        $('#img1').css("display", "none");
-                        $('#img2').css("display", "block");
+                        $('#start').css("display", "none");
+                        $('#pause').css("display", "block");
                     });
                     // 暂停
                     $(document).on('click', '#js-pause', function () {
                         audio.pause()
-                        $('#img1').css("display", "block");
-                        $('#img2').css("display", "none");
+                        $('#start').css("display", "block");
+                        $('#pause').css("display", "none");
                     });
                 });
                 setInterval(function () {
@@ -445,7 +444,6 @@
             }
         };
         $(function () {
-            console.log(6666);
             RENDERER.init();
         });
     </script>

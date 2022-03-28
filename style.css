@@ -57,11 +57,11 @@ body {
     left: 41px;
 }
 
-#img1 {
+#start {
     display: block;
 }
 
-#img2 {
+#pause {
     display: none;
 }
 
