@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <title>小芳</title>
     <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script>
     <link type="text/css" href="./style.css" rel="stylesheet" />
@@ -74,25 +74,6 @@
         </div>
     </div>
     <script>
-        //--创建页面监听，等待微信端页面加载完毕 触发音频播放
-        document.addEventListener('DOMContentLoaded', function () {
-            function audioAutoPlay() {
-                var audio = document.getElementById('audio');
-                audio.play();
-                document.addEventListener("WeixinJSBridgeReady", function () {
-                    audio.play();
-                }, false);
-            }
-            audioAutoPlay();
-        });
-        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-        function audioAutoPlay() {
-            var audio = document.getElementById('audio');
-            audio.play();
-            document.removeEventListener('touchstart',audioAutoPlay);
-        }
-        document.addEventListener('touchstart', audioAutoPlay);
-
         $(function () {
             AudioControl('audio');
 
@@ -114,6 +95,12 @@
                     });
                     // 播放
                     $(document).on('click', '#js-play', function () {
+                        audio.play()
+                        $('#start').css("display", "none");
+                        $('#pause').css("display", "block");
+                    });
+                    // 触摸播放
+                    $(document).on('click', '#jsi-cherry-container', function () {
                         audio.play()
                         $('#start').css("display", "none");
                         $('#pause').css("display", "block");
