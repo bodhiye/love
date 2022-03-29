@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <title>小芳</title>
+    <meta charset="utf-8" />
+    <title>小叶❤️小芳</title>
     <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script>
     <link type="text/css" href="./style.css" rel="stylesheet" />
     <style>
@@ -71,6 +71,9 @@
                 <li></li>
                 <li></li>
             </ol>
+        </div>
+        <div class="timer">
+            <b id="d"></b> 天 <b id="h"></b> 小时 <b id="m"></b> 分钟 <b id="s"></b> 秒
         </div>
     </div>
     <script>
@@ -452,6 +455,29 @@
         $(function () {
             RENDERER.init();
         });
+        function timer() {
+            var start = new Date(2019, 4, 1);
+            var t = new Date() - start;
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+        setInterval(timer, 1000);
     </script>
     <style>
         html,
@@ -469,6 +495,21 @@
             margin: 0;
             padding: 0;
             background-color: #000000;
+        }
+
+        .timer {
+            position: absolute;
+            text-align: center;
+            height: 2em;
+            top: 2em;
+            line-height: 2em;
+            width: 100%;
+            font-size: 200%;
+            color: white;
+        }
+        
+        .timer b {
+            color: rgb(253, 99, 125);
         }
     </style>
 </body>
