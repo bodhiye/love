@@ -172,64 +172,64 @@ li {
 }
 
 .minbox li:nth-child(1) {
-    background: url(http://movie.yeqiongzhou.com/01.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/01.jpg) no-repeat 0 0;
     -webkit-transform: translateZ(50px);
 }
 
 .minbox li:nth-child(2) {
-    background: url(http://movie.yeqiongzhou.com/02.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/02.jpg) no-repeat 0 0;
     -webkit-transform: rotateX(180deg) translateZ(50px);
     /* transform: rotate(180deg); */
 }
 
 .minbox li:nth-child(3) {
-    background: url(http://movie.yeqiongzhou.com/03.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/03.jpg) no-repeat 0 0;
     -webkit-transform: rotateX(-90deg) translateZ(50px);
 }
 
 .minbox li:nth-child(4) {
-    background: url(http://movie.yeqiongzhou.com/04.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/04.jpg) no-repeat 0 0;
     -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .minbox li:nth-child(5) {
-    background: url(http://movie.yeqiongzhou.com/05.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/05.jpg) no-repeat 0 0;
     -webkit-transform: rotateY(-90deg) translateZ(50px);
 }
 
 .minbox li:nth-child(6) {
-    background: url(http://movie.yeqiongzhou.com/06.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/06.jpg) no-repeat 0 0;
     -webkit-transform: rotateY(90deg) translateZ(50px);
 }
 
 .maxbox li:nth-child(1) {
-    background: url(http://movie.yeqiongzhou.com/1.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/1.jpg) no-repeat 0 0;
     -webkit-transform: translateZ(50px);
 }
 
 .maxbox li:nth-child(2) {
-    background: url(http://movie.yeqiongzhou.com/2.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/2.jpg) no-repeat 0 0;
     -webkit-transform: translateZ(50px);
     /* transform: rotate(180deg); */
 }
 
 .maxbox li:nth-child(3) {
-    background: url(http://movie.yeqiongzhou.com/3.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/3.jpg) no-repeat 0 0;
     -webkit-transform: rotateX(-90deg) translateZ(50px);
 }
 
 .maxbox li:nth-child(4) {
-    background: url(http://movie.yeqiongzhou.com/4.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/4.jpg) no-repeat 0 0;
     -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .maxbox li:nth-child(5) {
-    background: url(http://movie.yeqiongzhou.com/5.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/5.jpg) no-repeat 0 0;
     -webkit-transform: rotateY(-90deg) translateZ(50px);
 }
 
 .maxbox li:nth-child(6) {
-    background: url(http://movie.yeqiongzhou.com/6.jpg) no-repeat 0 0;
+    background: url(https://movie.yeqiongzhou.com/6.jpg) no-repeat 0 0;
     -webkit-transform: rotateY(90deg) translateZ(50px);
 }
 
