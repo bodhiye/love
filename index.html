@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>小芳</title>
-    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js"></script>
     <link type="text/css" href="./style.css" rel="stylesheet" />
     <style>
         html,
@@ -47,8 +47,8 @@
             </div>
         </div>
         <div class="video">
-            <video controls autoplay loop name="media" id="js-video">
-                <source src="./mp3/music.mp3" type="video/mp4">
+            <video controls preload autoplay loop name="media" id="audio">
+                <source src="http://movie.yeqiongzhou.com/iyaiya.mp3" type="video/mp4">
             </video>
         </div>
     </div>
@@ -74,8 +74,27 @@
         </div>
     </div>
     <script>
+        //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+        document.addEventListener('DOMContentLoaded', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('audio');
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    audio.play();
+                }, false);
+            }
+            audioAutoPlay();
+        });
+        //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+        function audioAutoPlay() {
+            var audio = document.getElementById('audio');
+            audio.play();
+            document.removeEventListener('touchstart',audioAutoPlay);
+        }
+        document.addEventListener('touchstart', audioAutoPlay);
+
         $(function () {
-            AudioControl('js-video');
+            AudioControl('audio');
 
             function AudioControl(id) {
                 // 音频控制进度条
